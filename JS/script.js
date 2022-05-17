@@ -12,13 +12,34 @@ const personalMovieDB = {
 
 };
 
-const a = prompt ('Один из последних фильмов?', ' '),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt ('Один из последних фильмов?', ' '),
-      d = prompt('На сколько оцените его?', '');
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+
+    for( let i =0; i< 2;i++){
+       let a= prompt ('Один из последних фильмов?', ' '),
+            b = prompt('На сколько оцените его?', '');
+        
+        if (a !=null && b != null && a != '' && b !='' && a.length<50){
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+        } else {
+            console.log('error');
+            i--;
+        }
+    }
+
+if (personalMovieDB.count<10){
+    console.log('мало фильмов');
+
+}else if(personalMovieDB.count >= 10 && personalMovieDB.count< 30){
+    console.log( "достаточно фильмов");
+} else if (personalMovieDB.count >=30) {
+    console.log('вы киноман');
+} else {
+    console.log('ошибка');
+}
+
+console.log(personalMovieDB);
+
 
 
 
@@ -130,7 +151,7 @@ do {
     num++;
 
 } while( num <55);
-*/
+
 
 let num = 50;
 for (let i = 1; i < 10; i++){
@@ -140,3 +161,99 @@ for (let i = 1; i < 10; i++){
     }
     console.log(i);
 }
+
+
+// ЦИКЛЫ В ЦИКЛАХ
+for ( let i = 0; i < 3; i++){
+    console.log(i);
+    for (let j = 0; j< 3; j++){
+        console.log(j);
+    }
+}
+
+
+
+let result = '';
+const length = 7;
+
+first: for( let i = 1; i < 3; i++){
+    console.log(`First level: ${i}`);
+
+    for( let j = 0; j < 3; j++){
+        console.log(`Second level: ${j}`);
+
+        for( let k = 0; k < 3; k++){
+            if (k === 2) break first;
+            console.log(`Third level: ${k}`);
+
+        }
+    }
+}
+
+
+console.log(result);
+
+
+
+// Место для первой задачи
+function firstTask() {
+    for (let i =5; i < 11; i++){
+        console.log(i);
+    }
+}
+
+// Место для второй задачи
+function secondTask() {
+    for (let i = 20; i>10; i--){
+        if (i === 13) break;
+        console.log(i);
+    }
+}
+
+// Место для третьей задачи
+function thirdTask() {
+    for ( let i = 2; i<11; i=i+2){
+        console.log(i);
+    }
+}
+
+// Место для четвертой задачи
+
+// Цикл, который нужно переписать:
+
+// for (let i = 2; i <= 16; i++) {
+//     if (i % 2 === 0) {
+//         continue;
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+function fourthTask() {
+    let i = 2;
+   while (i <=16){
+       if (i % 2 === 0) {
+         continue;
+     } else {
+         console.log(i);
+     }
+       i++;
+   }
+    
+    
+}
+
+// Место для пятой задачи
+
+function fifthTask() {
+    const arrayOfNumbers = [];
+
+    for( let i = 5; i<11; i++){
+        arrayOfNumbers[i]= i;
+    }
+    
+    // Не трогаем
+    return arrayOfNumbers;
+}
+
+*/
