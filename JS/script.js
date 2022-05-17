@@ -97,7 +97,7 @@ if (hamburger === 3 && cola === 1 && fries ){
     console.log(" we are leaving");
 }
 
-*/
+
 
 const hamburger = 3;
 const fries = 3;
@@ -116,4 +116,27 @@ console.log(johnReport || alexReport || samReport || mariaReport);
 
 
 
-console.log(  5 === 5 && 3> 1 || 5);
+
+
+
+while (num <= 55){
+    console.log(num);
+    num++;
+}
+
+let num = 50;
+do {
+    console.log(num);
+    num++;
+
+} while( num <55);
+*/
+
+let num = 50;
+for (let i = 1; i < 10; i++){
+    if (i === 6){
+        //break;
+        continue;
+    }
+    console.log(i);
+}
